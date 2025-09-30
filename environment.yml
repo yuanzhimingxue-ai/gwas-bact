@@ -1,0 +1,28 @@
+name: gwas
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  # 变异检测/GATK 生态
+  - gatk4
+  - openjdk=17
+  - samtools
+  - bcftools
+  - htslib          # 含 tabix/bgzip
+
+  # 比对
+  - bwa-mem2
+  - bwa
+
+  # GWAS / 工具
+  - plink2
+  - gsl
+
+  # Python 仅用于表型/统计文件处理（不含绘图）
+  - python>=3.10
+  - pandas
+  - numpy
+
+  # 常用小工具
+  - pigz
+
